@@ -16,8 +16,11 @@ function createWindow() {
       title: "Opt Text"
     }
   });
-  const localFile = `file://${path.join(__dirname, './electron/build/index.html')}`;
-  mainWindow.loadURL(isDev ? 'http://localhost:3000' : localFile);
+  console.log(isDev);
+  const localFile = `file://${path.join(__dirname, './build/index.html')}`;
+  console.log(localFile);
+  // mainWindow.loadURL(isDev ? 'http://localhost:3000' : localFile);
+  mainWindow.loadURL(localFile);
 }
 
 // 打开开发者工具
